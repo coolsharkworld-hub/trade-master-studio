@@ -1,0 +1,43 @@
+{
+  "name": "trade-master-studio",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "prebuild": "npm run extract-types",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "extract-types": "sanity schema extract --enforce-required-fields",
+    "export-data": "npx sanity dataset export production sample-data.tar.gz",
+    "import-data": "npx sanity dataset import ./sample-data.tar.gz"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/assist": "^4.4.7",
+    "@sanity/vision": "^4.4.1",
+    "next-sanity": "^10.0.10",
+    "react": "^19.1",
+    "react-dom": "^19.1",
+    "sanity": "^4.3.0",
+    "sanity-plugin-asset-source-unsplash": "^3.1.0",
+    "styled-components": "^6.1.18"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^5.0.2",
+    "@types/react": "^19.1",
+    "eslint": "^9.28",
+    "prettier": "^3.5",
+    "typescript": "^5.8"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+  }
+}
