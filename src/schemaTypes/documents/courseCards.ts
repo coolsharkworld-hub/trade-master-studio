@@ -17,7 +17,7 @@ export const courseCards = defineType({
       type: 'text',
     }),
     defineField({
-      name: 'courses',
+      name: 'course',
       title: 'Courses',
       type: 'array',
       of: [
