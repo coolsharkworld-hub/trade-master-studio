@@ -17,7 +17,7 @@ export const communityFeedback = defineType({
       type: 'text',
     }),
     defineField({
-      name: 'feedbacks',
+      name: 'feedback',
       title: 'Feedbacks',
       type: 'array',
       of: [
